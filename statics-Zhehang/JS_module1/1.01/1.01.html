@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div style="background-color:#0000;border:1px solid black;position:relative;width:500px;height:530px;">
+    <p style="text-align: center">
+      <font size="2">
+        Could the forces between blocks A and B act in the directions and senses shown?</font>
+    </p>
+    <img src="1.01_image5.png" 
+    style="height:100px;width:275px;display:block;margin:auto;">
+
+    <input type="radio" onclick="yesnoCheck()" name="yesno1" id="yesCheck1" style=margin-left:110px;> yes
+    <input type="radio" onclick="yesnoCheck()" name="yesno1" id="noCheck1" style=margin-left:20px;> no
+    <input type="radio" onclick="yesnoCheck()" name="yesno2" id="yesCheck2" style=margin-left:95px;> yes
+    <input type="radio" onclick="yesnoCheck()" name="yesno2" id="noCheck2" style=margin-left:15px;> no<br>
+    <p style="text-align: center">
+      <font id=ifYesOrNo1 size="2" style="visibility:hidden;padding:10px;">
+        Now click the Start button to see what happens when we grab block B and try to use it to move block A up or down.</font>
+    </p>
+    <div id=ifYesOrNo2 style="visibility:hidden;background-color:#ffbf00;border:1px solid black;width: 350px;height: 150px;
+    position: absolute;top: 73%; left: 50%;transform: translate(-50%,-50%);padding: 2rem;">
+      <button onclick="move_hand()"> Start </button>
+      <div style=text-align:right;>
+
+        <img id=hand src="1.01_image1.png" 
+        style="width:250px;height:228px;position:fixed;left:180px;"></img>
+
+        <img id=blockA src="1.01_image3.png"
+        style="position:absolute;top:65px;left:180px;width:25px;height:100px;">
+    
+        <img id=blockB src="1.01_image4.png"
+        style="position:absolute;top:90px;left:205px;width:25px;height:50px;">
+
+      </div>
+    </div>
+  </div>
+
+<script src=https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js></script>
+<script type=text/javascript src="moveHands.js"></script>
+</body>
+</html>

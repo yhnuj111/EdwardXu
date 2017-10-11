@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div style="background-color:#0000;border: 1px solid black; position: relative; width: 500px;height: 478px;">
+    <p style="text-align: center">
+      <font size="2">
+        Could the forces between blocks A and B act in the directions and senses shown?</font>
+    </p>
+    <img src="perpendicular_blocks.png" style="height: 100px;
+    width: 150px;display:block;margin:auto;">
+
+
+    <input type="radio" onclick="yesnoCheck()" name="yesno" id="yesCheck" style=margin-left:190px;> yes
+    <input type="radio" onclick="yesnoCheck()" name="yesno" id="noCheck" style=margin-left:45px; > no<br>
+
+    <p style="text-align: center">
+      <font size="2" style=padding:10px;>
+        Now click the Start button to see what happens when we grab block B and try to use it to move block A to the left.</font>
+    </p>
+    <div id=ifYesOrNo style="visibility:hidden; background-color:#ffbf00;border:1px solid black;width: 350px;height: 150px;
+    position: absolute;top: 73%; left: 50%;transform: translate(-50%,-50%);padding: 2rem;">
+
+      <button id="start"; onclick='move_hand2("hand2");style = "visibility:hidden";show("reset");'/> Start</button>
+      <button id="reset"; onclick='hide("reset","start");style = "visibility:hidden";move_hand3("hand2");'/> Reset</button>
+      <div id =newb style='text-align:right;'>
+        <img id='hand2' src="hand_with_blue_pink_block.png" style="width:304px;height:228px;position:fixed;
+        left:40px;"></img>
+      </div>
+    </div>
+    <div id =ifYesOrNo2 style="visibility:hidden; background-color:#ffbf00;border:1px solid black;width: 350px;height: 150px;
+    position: absolute;top: 73%; left: 50%;transform: translate(-50%,-50%);padding: 2rem;">
+    <button id="start1"; onclick='move_hand2("hand3");style = "visibility:hidden";show("reset1");'/> Start</button>
+    <button id="reset1"; onclick='hide("reset1","start1");style = "visibility:hidden";move_hand3("hand3");'/> Reset</button>
+    <div id =newb style='text-align:right;'>
+      <img id='hand3' src="hand_with_blue_pink_block.png" style="width:304px;height:228px;position:fixed;
+      left:40px;"></img>
+    </div>
+
+    </div>
+  </div>
+
+<script src=https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js></script>
+<script type=text/javascript src="1.02.js"></script>
+</body>
+
+</html>
